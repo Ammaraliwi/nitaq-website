@@ -1,0 +1,116 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+locale: "ar"
+
+collections:
+  - name: "site_content"
+    label: "محتوى الموقع"
+    files:
+      - label: "الإعدادات العامة"
+        name: "site"
+        file: "content/data.json"
+        format: "json"
+        editor:
+          preview: false
+        fields:
+          - label: "معلومات الموقع"
+            name: "site"
+            widget: "object"
+            fields:
+              - { label: "اسم الشركة", name: "brand_name", widget: "string" }
+              - { label: "الحرف في الشعار", name: "brand_letter", widget: "string" }
+              - { label: "رقم واتساب (بدون +)", name: "whatsapp_number", widget: "string", hint: "مثال: 963999999999" }
+              - { label: "اسم مستخدم تلغرام", name: "telegram_username", widget: "string" }
+
+          - label: "القسم الرئيسي (Hero)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "النص العلوي", name: "eyebrow", widget: "string" }
+              - { label: "العنوان — الجزء الأول", name: "title_start", widget: "string" }
+              - { label: "العنوان — الكلمة المميزة", name: "title_accent", widget: "string" }
+              - { label: "العنوان — الجزء الأخير", name: "title_end", widget: "string" }
+              - { label: "الوصف", name: "subtitle", widget: "text" }
+              - { label: "زر رئيسي", name: "cta_primary", widget: "string" }
+              - { label: "زر ثانوي", name: "cta_secondary", widget: "string" }
+              - label: "نقاط الثقة"
+                name: "trust_items"
+                widget: "list"
+                field: { label: "النقطة", name: "item", widget: "string" }
+
+          - label: "عنوان قسم الخدمات"
+            name: "services_section"
+            widget: "object"
+            fields:
+              - { label: "الوسم", name: "tag", widget: "string" }
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "الوصف", name: "subtitle", widget: "text" }
+
+          - label: "الخدمات"
+            name: "services"
+            widget: "list"
+            fields:
+              - label: "الأيقونة"
+                name: "icon"
+                widget: "select"
+                options: ["globe", "mail", "monitor", "support"]
+              - { label: "اسم الخدمة", name: "title", widget: "string" }
+              - { label: "الوصف", name: "description", widget: "text" }
+
+          - label: "عنوان قسم الباقات"
+            name: "pricing_section"
+            widget: "object"
+            fields:
+              - { label: "الوسم", name: "tag", widget: "string" }
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "الوصف", name: "subtitle", widget: "text" }
+
+          - label: "الباقات"
+            name: "pricing"
+            widget: "list"
+            fields:
+              - { label: "اسم الباقة", name: "name", widget: "string" }
+              - { label: "وصف قصير", name: "tagline", widget: "string" }
+              - { label: "السعر", name: "price", widget: "string" }
+              - { label: "باقة مميزة؟", name: "featured", widget: "boolean", default: false }
+              - { label: "نص الشارة (إن وُجدت)", name: "badge", widget: "string", required: false }
+              - label: "المميزات"
+                name: "features"
+                widget: "list"
+                field: { label: "الميزة", name: "feature", widget: "string" }
+
+          - label: "عنوان قسم لماذا نحن"
+            name: "why_section"
+            widget: "object"
+            fields:
+              - { label: "الوسم", name: "tag", widget: "string" }
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "الوصف", name: "subtitle", widget: "text" }
+
+          - label: "بنود لماذا نحن"
+            name: "why_items"
+            widget: "list"
+            fields:
+              - label: "الأيقونة"
+                name: "icon"
+                widget: "select"
+                options: ["dollar", "bolt", "heart", "check"]
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "الوصف", name: "description", widget: "text" }
+
+          - label: "قسم التواصل"
+            name: "contact_section"
+            widget: "object"
+            fields:
+              - { label: "الوسم", name: "tag", widget: "string" }
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "الوصف", name: "subtitle", widget: "text" }
+              - { label: "عنوان البطاقة", name: "info_title", widget: "string" }
+              - { label: "نص البطاقة", name: "info_text", widget: "text" }
+
+          - { label: "نص الفوتر", name: "footer_text", widget: "text" }
