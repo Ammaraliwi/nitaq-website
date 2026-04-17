@@ -29,7 +29,7 @@
       "name": "باقة الأعمال",
       "tagline": "مناسبة للشركات الصغيرة",
       "price": "$150",
-      "featured": true,
+      "featured": false,
       "badge": "الأكثر طلباً",
       "features": [
         "تسجيل دومين خاص بشركتك",
@@ -43,7 +43,7 @@
       "name": "الباقة الكاملة",
       "tagline": "مناسبة للشركات الناشئة",
       "price": "$250",
-      "featured": false,
+      "featured": true,
       "badge": "",
       "features": [
         "تسجيل دومين خاص بشركتك",
