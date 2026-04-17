@@ -15,7 +15,7 @@
     {
       "name": "الباقة المبدئية",
       "tagline": "مناسبة للبداية والمستقلين",
-      "price": "$50 – $100",
+      "price": "$100",
       "featured": false,
       "badge": "",
       "features": [
@@ -28,7 +28,7 @@
     {
       "name": "باقة الأعمال",
       "tagline": "مناسبة للشركات الصغيرة",
-      "price": "$100 – $150",
+      "price": "$150",
       "featured": true,
       "badge": "الأكثر طلباً",
       "features": [
@@ -42,7 +42,7 @@
     {
       "name": "الباقة الكاملة",
       "tagline": "مناسبة للشركات الناشئة",
-      "price": "$150 – $250",
+      "price": "$250",
       "featured": false,
       "badge": "",
       "features": [
